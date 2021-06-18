@@ -1,0 +1,149 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*body*/
+
+body {
+    font-size: $baseFontSize;
+    font-family: $fontFamily;
+    font-weight: $baseFontWeight;
+}
+
+
+/*header*/
+
+/*if using a wrapper, add:
+div#headerWrapper {} */ 
+
+
+header {
+    background-color: $mainColor;
+    padding: 1rem $gutter;
+
+    h1 {
+        font-weight: $boldWeight;
+    }
+    h2 {
+        font-weight: $baseFontWeight;
+    }
+} //end header
+
+/*navigation: this sets up four menu items 25% wide*/ 
+
+/*If using a wrapper, add div#navWrapper{}*/ 
+
+nav {
+    background-color: $mainColor;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    background-color: #444;
+    color: #eee;
+    border-left: 1px solid #777;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+/*main*/ 
+
+/*If using a wrapper, add div#mainWrapper{}*/ 
+
+main {
+    padding: 1rem $gutter;
+}
+
+/* template for hero image: 
+main figure.hero {
+    width: 100%;
+    margin: 0;
+}
+
+main figure.hero img {
+    width: 100%;
+}*/
+
+main h1 {
+    font-weight: $boldWeight;
+}
+
+/*template for images in body, floated right, fullwidth on phone:
+main figure.myPhoto {
+    width: 100%;
+    margin: 0;
+    float: right;
+}
+
+main figure.myPhoto img {
+    width: 100%;
+}
+
+main figcaption {
+    text-align: center;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+}*/ 
+
+/* template for images using grid:
+main {
+    div.parent {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    div.parent figure {
+        
+        padding: 1rem 2vw;
+        width:100%;
+        margin: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+} */ 
+
+/*footer*/ 
+
+/*If using a wrapper, add div#footerWrapper{}*/ 
+
+footer {
+    background-color: $mainColor;
+    padding: .5rem $gutter;
+    text-align: center;
+
+    a {
+    text-decoration: none;
+    color: $textColor;
+    }
+}
+
+/*clearfix: so that elements don't colapse*/ 
+.clearfix:after {
+    content: "";
+  display: table;
+  clear: both;
+}

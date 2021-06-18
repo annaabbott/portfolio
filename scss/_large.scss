@@ -1,0 +1,14 @@
+/* setting up max-width for desktop */ 
+
+header, nav, main, footer {
+    max-width: 64rem;
+    margin:auto;
+}
+
+/* to create a wrapper, surround each section with a div id="headerWrapper" or similar*/ 
+
+
+/* template for images in body, floated right, 33% width on desktop:
+main figure.myPhoto {
+    width: 31%;
+} */ 
