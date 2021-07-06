@@ -10,14 +10,19 @@ nav ul {margin-left: 2%;}
     nav ul li:last-child a {border-right: 1px solid #777;}
     nav ul li a{padding: .5rem 1rem;}
 
+/* main */ 
 
-/* template for images in body, floated right, 50% width on tablet:
-main figure.myPhoto {
-    width: 48%;
-    margin-left: $gutter;
-} */ 
-
-/* template for images using grid:
-main div.parent figure {
-    flex-basis: 31%;
-} */ 
+main {
+    /* columns */ 
+    
+        @for $i from 1 through 12 {
+            $w: ($i / 12) * 100%;
+            .medium-#{$i} {
+                flex-basis: $w;
+            }
+        } //end loop to create columns
+    
+        .small-spacer {
+            margin-left: 0;
+        }
+     } // end main

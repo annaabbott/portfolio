@@ -19,18 +19,6 @@ body {
 div#headerWrapper {} */ 
 
 
-header {
-    background-color: $mainColor;
-    padding: 1rem $gutter;
-
-    h1 {
-        font-weight: $boldWeight;
-    }
-    h2 {
-        font-weight: $baseFontWeight;
-    }
-} //end header
-
 /*navigation: this sets up four menu items 25% wide*/ 
 
 /*If using a wrapper, add div#navWrapper{}*/ 
@@ -59,14 +47,27 @@ nav ul li a {
 }
 nav ul li:first-child a {border-left: none;}
 
-nav ul li a:hover {
-    background-color: #eee;
-    color: #333;
-}
-nav ul li.active a {
-    background-color: #000;
-    color: #fff;
-}
+header {
+    /*the linear-gradient, below, adds an overlay to the background image so I can use
+    colored text and keep color contrast acceptable. */
+    background-image:
+    linear-gradient(rgba(105,105,105,0), rgba(68, 68, 68, 0.6)),
+    url("../images/image01.jpg");
+    background-repeat: no-repeat;
+    padding: 1rem;
+    background-size: cover;
+    height: 90vh; 
+    color: #707070;
+    font-weight: 400;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        margin-top: 45vh, 0;
+    }
+  }
 
 /*main*/ 
 
@@ -86,60 +87,144 @@ main figure.hero img {
     width: 100%;
 }*/
 
-main h1 {
-    font-weight: $boldWeight;
-}
+ 
 
-/*template for images in body, floated right, fullwidth on phone:
-main figure.myPhoto {
-    width: 100%;
-    margin: 0;
-    float: right;
-}
-
-main figure.myPhoto img {
-    width: 100%;
-}
-
-main figcaption {
-    text-align: center;
-    font-size: .8rem;
-    padding-bottom: 1rem;
-}*/ 
-
-/* template for images using grid:
+/* columns */ 
 main {
-    div.parent {
-        display: grid;
-        grid-template-columns: 50% 50%;
+
+    h1 {
+        font-weight: $boldWeight;
+        text-align: center;
     }
 
-    div.parent figure {
-        
-        padding: 1rem 2vw;
-        width:100%;
-        margin: 0;
+    h3 {
+        font-weight: $baseFontWeight;
+        text-align: center;
+    }
 
-        img {
-            width: 100%;
+    div.flexed {
+      display: flex;
+      flex-wrap: wrap;
+      }
+  
+      .column {
+          padding: 0 $gutter;
+      }
+  
+      @for $i from 1 through 12 {
+          $w: ($i / 12) * 100%;
+          .small-#{$i} {
+              flex-basis: $w;
+          }
+      } //end loop to create columns
+
+      p.icon {display: block;
+          text-align: center;}
+
+        p.button {
+            text-align: center;
+            background-color: $mainColor;
+            padding: .5rem 0;
         }
-    }
-} */ 
+      
+      .article {
+          display: flex;
+          flex-direction: row;
+          padding-top: .5rem;
+          padding-bottom: .5rem;
+          
+          figure {
+              width: 100%;
+              margin: 0;
+              padding: 0;
+
+              img {
+                  width: 100%;
+                  margin: 0;
+                  padding: 0;
+                  display: block;
+              }
+          }
+
+              div.articleInfo {
+              flex-wrap: nowrap;
+              padding: 0 0 0 1rem;
+              ul {
+                  list-style-type: none;
+                  display: flex;
+                  padding: 0;
+
+                  li {
+                      padding: 0 .5rem;
+                  }
+              }
+
+              a {
+                  text-decoration: none;
+                  color: $textColor;
+              }
+              }
+          }
+
+          .projects {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+
+            figure {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            img {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: block;
+            }
+
+            a {
+                text-decoration: none;
+                color: $textColor;
+            }
+
+          }
+
+          .overview {
+            figure {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+
+                img {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    display: block;
+                }
+            }
+          }
+
+          .underline {
+              text-decoration: underline;
+          }
+ }
+
+
+
+
 
 /*footer*/ 
 
 /*If using a wrapper, add div#footerWrapper{}*/ 
 
 footer {
+    
     background-color: $mainColor;
     padding: .5rem $gutter;
-    text-align: center;
-
-    a {
-    text-decoration: none;
     color: $textColor;
-    }
-}
+    text-align: center;
+   }
 
 /*clearfix: so that elements don't colapse*/ 
 .clearfix:after {
