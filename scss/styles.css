@@ -397,7 +397,7 @@ nav ul li:first-child a {
   border-left: none;
 }
 
-header {
+header.landing {
   /*the linear-gradient, below, adds an overlay to the background image so I can use
     colored text and keep color contrast acceptable. */
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(105, 105, 105, 0)), to(rgba(68, 68, 68, 0.6))), url("../images/image01.jpg");
@@ -421,8 +421,12 @@ header {
           justify-content: center;
 }
 
-header h1 {
+header.landing h1 {
   margin-top: 45vh, 0;
+}
+
+header.pageTitle {
+  text-align: center;
 }
 
 /*main*/
@@ -528,7 +532,12 @@ main p.icon {
   text-align: center;
 }
 
-main p.button {
+main a {
+  text-decoration: none;
+  color: #303030;
+}
+
+main a p.button {
   text-align: center;
   background-color: #ccc;
   padding: .5rem 0;
@@ -574,7 +583,10 @@ main .article div.articleInfo ul {
 }
 
 main .article div.articleInfo ul li {
-  padding: 0 .5rem;
+  padding: 0 .5rem 0 0;
+  font-size: 80%;
+  font-weight: 200;
+  color: #707070;
 }
 
 main .article div.articleInfo a {
@@ -603,6 +615,11 @@ main .projects img {
 main .projects a {
   text-decoration: none;
   color: #303030;
+}
+
+main .overview {
+  margin: 0;
+  padding-left: 0;
 }
 
 main .overview figure {

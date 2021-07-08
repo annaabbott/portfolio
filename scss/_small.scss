@@ -47,7 +47,7 @@ nav ul li a {
 }
 nav ul li:first-child a {border-left: none;}
 
-header {
+header.landing {
     /*the linear-gradient, below, adds an overlay to the background image so I can use
     colored text and keep color contrast acceptable. */
     background-image:
@@ -68,6 +68,12 @@ header {
         margin-top: 45vh, 0;
     }
   }
+
+  header.pageTitle {
+    text-align: center;
+    
+}
+
 
 /*main*/ 
 
@@ -118,13 +124,19 @@ main {
           }
       } //end loop to create columns
 
+
       p.icon {display: block;
           text-align: center;}
 
-        p.button {
+        a{
+                text-decoration: none;
+                color: $textColor;
+            
+          p.button {
             text-align: center;
             background-color: $mainColor;
             padding: .5rem 0;
+          }   
         }
       
       .article {
@@ -155,7 +167,10 @@ main {
                   padding: 0;
 
                   li {
-                      padding: 0 .5rem;
+                      padding: 0 .5rem 0 0 ;
+                      font-size: 80%;
+                      font-weight: $lightWeight;
+                      color: $lightText;
                   }
               }
 
@@ -191,6 +206,9 @@ main {
           }
 
           .overview {
+              margin: 0;
+              padding-left: 0;
+
             figure {
                 width: 100%;
                 margin: 0;
