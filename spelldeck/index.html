@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anna Abbott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>D&D Spells</title>
+
+    <!--font family-->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/api.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="gridContainer">
+            <div class="form">
+                <h1>D&D 5e Spellbook</h1>
+                <form name="search">
+                    <label for="className">My Character is a </label>
+                    <select name="className" id="className">
+                        <option value="bard">Bard</option>
+                        <option value="cleric">Cleric</option>
+                        <option value="druid">Druid</option>
+                        <option value="paladin">Paladin</option>
+                        <option value="ranger">Ranger</option>
+                        <option value="sorcerer">Sorcerer</option>
+                        <option value="warlock">Warlock</option>
+                        <option value="wizard">Wizard</option>
+                    </select>
+                    </br>
+                    <label for="spellLevel">I want to explore spells level</label>
+                    <select name="spellLevel" id="spellLevel">
+                        <option value="0">cantrip (0)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    </br>
+                    <button type="button" id="searchButton" >Search for spells</button>
+                </form>
+                <div id="status" class="hidden">
+                    <h2 id="whateverHeader">Spells</h2>
+                </div>
+            </div>
+            <!--End form grid item-->
+            <div id="results" class="cards">
+            </div>
+            <!--End cards grid item-->
+            <div id="spellbook" class="spellbook">
+                <h2 id="spellbookTitle"></h2>
+            </div>
+            <!--End spellbook grid item-->
+            <div id="modal" class="modal-background modal-hidden">
+                <div class="modal-frame">
+                    <div class="modal-header">Lorem Ipsum</div>
+                    <div class="modal-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
+                        <p>Praesent libero?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="button" id="cancelBtn">Cancel</button> -->
+                        <button type="button" class="button" id="okBtn">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End grid container-->
+    </main>
+    <script src="./scripts/modal.js"></script>
+</body>
+
+</html>

@@ -221,6 +221,15 @@ main {
                     display: block;
                 }
             }
+
+            .overviewBtn {
+                display: flex;
+                justify-content: space-between;
+                
+                a{
+                    flex-basis: 30%;
+                }
+            }
           }
 
           .underline {

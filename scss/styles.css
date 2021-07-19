@@ -635,6 +635,20 @@ main .overview figure img {
   display: block;
 }
 
+main .overview .overviewBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .overview .overviewBtn a {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
 main .underline {
   text-decoration: underline;
 }

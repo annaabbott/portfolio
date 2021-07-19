@@ -1,0 +1,185 @@
+body {
+    font-size: 16;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #101010;
+}
+
+h1 {
+    color: #4d2d2d;
+}
+
+div#results h2 {
+    width: 100%;
+    margin: .5rem;
+}
+
+div#spellbook h2 {
+    width: 100%;
+    margin: .5rem;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.gridContainer {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "formArea formArea"
+        "cardsArea spellbookArea"
+        "detailsArea detailsArea";
+}
+
+.form {
+    grid-area: formArea;
+}
+
+.form label {
+    display: block;
+    padding-top: .25rem;
+}
+
+#className {
+    display: block;
+    border: solid 1px #101010;
+    border-radius: 5px;
+    padding: .5rem;
+    margin-top: .25rem;
+    width: 10%;
+}
+
+#spellLevel {
+    display: block;
+    border: solid 1px #101010;
+    border-radius: 5px;
+    padding: .5rem;
+    margin: .25rem 0;
+    width: 10%;
+}
+
+#searchButton {
+    border: none;
+    background-color: #aaa;
+    border-radius: .8rem;
+    padding: .5rem;
+    margin: .25rem 0 0 0;
+    width: 10%;
+    cursor: pointer;
+    background-color: #8EACBE;
+
+}
+
+
+.cards {
+    grid-area: cardsArea;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spellbook {
+    grid-area: spellbookArea;
+    display: flex;
+    flex-wrap: wrap;
+   align-content: flex-start;
+}
+
+.details {
+    grid-area: detailsArea;
+}
+
+
+.basicCard {
+    background-color: #355E6F;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .25);
+}
+.basicCard h3 {
+    text-align: center;
+    color: #c7c7c7;
+    
+}
+
+.basicCard img {
+    text-align: center;
+}
+
+.basicCard p {
+    text-align: center;
+}
+
+.button {
+    border: 1px solid #eee;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    border-radius: .8rem;
+    cursor: pointer;
+    background-color: #aaa;
+}
+
+.modal-background {
+    /* these attributes make the background shade 
+     * effect, and make it take up the whole screen.
+     */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, .25);
+  
+    /* these attributes make the modal centered in the
+     * viewport.
+     */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-frame {
+    /* set modal frame properties */
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    min-width: 500px;
+    max-width: 800px;
+    width: 50%;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, .25);
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header {
+    padding: 5px 15px 5px 15px;
+    background-color: #487486;
+    color: white;
+    font-weight: bold;
+    font-size: 15pt;
+  }
+  
+  .modal-content {
+    padding: 0px 15px 0px 15px;
+  }
+  
+  .modal-footer {
+    padding: 0px 15px 15px 15px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .modal-footer button {
+    margin-left: 5px;
+  }
+  
+  .modal-hidden {
+    display: none;
+  }
