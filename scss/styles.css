@@ -368,7 +368,7 @@ div#headerWrapper {} */
 /*navigation: this sets up four menu items 25% wide*/
 /*If using a wrapper, add div#navWrapper{}*/
 nav {
-  background-color: #ccc;
+  background-color: #69783A;
 }
 
 nav ul {
@@ -384,9 +384,9 @@ nav ul li {
 
 nav ul li a {
   display: block;
-  background-color: #444;
-  color: #eee;
-  border-left: 1px solid #777;
+  background-color: #69783A;
+  color: #fff;
+  border-left: 1px solid #707070;
   padding: .5rem 0;
   text-decoration: none;
   font-size: .9rem;
@@ -400,13 +400,13 @@ nav ul li:first-child a {
 header.landing {
   /*the linear-gradient, below, adds an overlay to the background image so I can use
     colored text and keep color contrast acceptable. */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(105, 105, 105, 0)), to(rgba(68, 68, 68, 0.6))), url("../images/image01.jpg");
-  background-image: linear-gradient(rgba(105, 105, 105, 0), rgba(68, 68, 68, 0.6)), url("../images/image01.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(105, 105, 105, 0)), to(rgba(68, 68, 68, 0.6))), url("../images/hero-option-2-cropped.jpg");
+  background-image: linear-gradient(rgba(105, 105, 105, 0), rgba(68, 68, 68, 0.6)), url("../images/hero-option-2-cropped.jpg");
   background-repeat: no-repeat;
   padding: 1rem;
   background-size: cover;
   height: 90vh;
-  color: #707070;
+  color: #fff;
   font-weight: 400;
   text-align: center;
   display: -webkit-box;
@@ -534,13 +534,14 @@ main p.icon {
 
 main a {
   text-decoration: none;
-  color: #303030;
+  color: #1f1f1f;
 }
 
 main a p.button {
   text-align: center;
-  background-color: #ccc;
+  background-color: #69783A;
   padding: .5rem 0;
+  color: #fff;
 }
 
 main .article {
@@ -591,7 +592,7 @@ main .article div.articleInfo ul li {
 
 main .article div.articleInfo a {
   text-decoration: none;
-  color: #303030;
+  color: #1f1f1f;
 }
 
 main .projects {
@@ -614,7 +615,7 @@ main .projects img {
 
 main .projects a {
   text-decoration: none;
-  color: #303030;
+  color: #1f1f1f;
 }
 
 main .overview {
@@ -656,9 +657,9 @@ main .underline {
 /*footer*/
 /*If using a wrapper, add div#footerWrapper{}*/
 footer {
-  background-color: #ccc;
+  background-color: #69783A;
   padding: 0.5rem 1vw;
-  color: #303030;
+  color: #fff;
   text-align: center;
 }
 

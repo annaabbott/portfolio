@@ -37,9 +37,9 @@ nav ul li {
 }
 nav ul li a {
     display: block;
-    background-color: #444;
-    color: #eee;
-    border-left: 1px solid #777;
+    background-color: #69783A;
+    color: #fff;
+    border-left: 1px solid #707070;
     padding: .5rem 0;
     text-decoration: none;
     font-size: .9rem;
@@ -52,12 +52,12 @@ header.landing {
     colored text and keep color contrast acceptable. */
     background-image:
     linear-gradient(rgba(105,105,105,0), rgba(68, 68, 68, 0.6)),
-    url("../images/image01.jpg");
+    url("../images/hero-option-2-cropped.jpg");
     background-repeat: no-repeat;
     padding: 1rem;
     background-size: cover;
     height: 90vh; 
-    color: #707070;
+    color: #fff;
     font-weight: 400;
     text-align: center;
     display: flex;
@@ -136,6 +136,7 @@ main {
             text-align: center;
             background-color: $mainColor;
             padding: .5rem 0;
+            color: #fff;
           }   
         }
       
@@ -249,7 +250,7 @@ footer {
     
     background-color: $mainColor;
     padding: .5rem $gutter;
-    color: $textColor;
+    color: #fff;
     text-align: center;
    }
 
